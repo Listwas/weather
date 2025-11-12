@@ -1,0 +1,64 @@
+
+.weather_box {
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(0 0% 100% / 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 200px;
+  max-height: 400px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.weather_box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px hsl(0 0% 0% / 0.2);
+  background: hsl(0 0% 100% / 0.15);
+}
+
+.basic_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.country_name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.temperature {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px hsl(0 0% 0% / 0.3);
+}
+
+.hover_details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsl(0 0% 0% / 0.3);
+  color: white;
+  padding: 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.weather_box:hover .hover_details {
+  transform: translateY(0);
+}
+
+.hover_details p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
